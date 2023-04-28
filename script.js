@@ -1,8 +1,8 @@
 const container = document.querySelector("#flex-container");
-container.setAttribute(
-  "style",
-  "background-color:white; border:3px solid black; height:1000px; width:960px; display: flex; justify-content: flex-start; align-items: stretch; margin: auto; flex-wrap: wrap"
-);
+// container.setAttribute(
+//   "style",
+//   "background-color:white; border:3px solid black; height:940px; width:940px; display: grid; gap: 0px; justify-content: flex-start; align-items: stretch; margin: 0 auto; flex-wrap: wrap"
+// );
 console.log(container);
 
 const userSelection = document.querySelector("#user-selection-squares");
@@ -20,10 +20,10 @@ const appendNumberofDivsSelectedByUser = function (e) {
   console.log(e.target.value);
   for (let i = 0; i < Number(e.target.value); i++) {
     const newDiv = document.createElement("div");
-    newDiv.setAttribute(
-      "style",
-      "background-color:peachpuff; border:1px solid brown; height:100px; width:100px"
-    );
+    // newDiv.setAttribute(
+    //   "style",
+    //   "background-color:peachpuff; border:1px solid brown; height:100px; width:100px"
+    // );
     container.appendChild(newDiv);
   }
 };
