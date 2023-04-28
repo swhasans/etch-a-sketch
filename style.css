@@ -1,0 +1,29 @@
+#flex-container{
+    background-color:white; 
+    border:3px solid black; 
+    display: grid; 
+    align-items: stretch; 
+    grid-template-columns: auto auto;
+    flex-wrap: wrap;
+    gap: 0px;
+    height:960px; 
+    width:960px; 
+    
+    /* background-color:white; 
+    border:3px solid black; 
+    height:940px; 
+    width:940px; 
+    display: grid; 
+    gap: 0px; 
+    justify-content: flex-start; 
+    align-items: stretch; 
+    margin: 0 auto; 
+    flex-wrap: wrap */
+
+} 
+
+
+#flex-container > div{
+    background-color:peachpuff; 
+    border:1px solid brown; 
+}
