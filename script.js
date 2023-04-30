@@ -18,7 +18,7 @@ const appendNumberofDivsSelectedByUser = function (e) {
   clearBox();
 
   console.log(e.target.value);
-  for (let i = 0; i < Number(e.target.value); i++) {
+  for (let i = 0; i < Number(e.target.value) * Number(e.target.value); i++) {
     const newDiv = document.createElement("div");
     // newDiv.setAttribute(
     //   "style",
