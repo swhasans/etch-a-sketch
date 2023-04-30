@@ -1,11 +1,17 @@
 const container = document.querySelector(".flex-container");
-const userSelection = document.querySelector("#user-selection-squares");
+const userInputNumOfDiv = document.querySelector("#user-selection-squares");
+const userSelectClear = document.querySelector("#user-clear-squares");
 let squaresPerSide = 16;
 
 function clearBox() { 
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
+}
+
+function eraseBox(){
+    clearBox();
+    createGrid();
 }
 
 function createGrid() {
@@ -29,7 +35,8 @@ function changeColourOfDiv(event){
     console.log(event.target);
 } 
 
-userSelection.addEventListener("input", numOfDivsInputtedByUser);
+userInputNumOfDiv.addEventListener("input", numOfDivsInputtedByUser);
 container.addEventListener("mousedown", changeColourOfDiv);
+userSelectClear.addEventListener("click", eraseBox);
 
 createGrid();
