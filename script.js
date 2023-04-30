@@ -21,7 +21,6 @@ function createGrid() {
 
 function numOfDivsInputtedByUser (event){
     squaresPerSide = Number(event.target.value);
-    console.log(squaresPerSide);
     createGrid();
 }
 
