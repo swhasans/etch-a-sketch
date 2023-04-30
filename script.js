@@ -1,12 +1,6 @@
-const container = document.querySelector("#flex-container");
-// container.setAttribute(
-//   "style",
-//   "background-color:white; border:3px solid black; height:940px; width:940px; display: grid; gap: 0px; justify-content: flex-start; align-items: stretch; margin: 0 auto; flex-wrap: wrap"
-// );
-console.log(container);
-
+const container = document.querySelector(".flex-container");
 const userSelection = document.querySelector("#user-selection-squares");
-console.log(userSelection);
+let squaresPerSide = 16;
 
 function clearBox() {
   while (container.firstChild) {
@@ -14,18 +8,23 @@ function clearBox() {
   }
 }
 
-const appendNumberofDivsSelectedByUser = function (e) {
+function createGrid() {
+  container.style.setProperty('--squares-per-side', squaresPerSide);
   clearBox();
 
-  console.log(e.target.value);
-  for (let i = 0; i < Number(e.target.value) * Number(e.target.value); i++) {
+  for (let i = 0; i < squaresPerSide * squaresPerSide; i++) {
     const newDiv = document.createElement("div");
-    // newDiv.setAttribute(
-    //   "style",
-    //   "background-color:peachpuff; border:1px solid brown; height:100px; width:100px"
-    // );
+    newDiv.classList.add('newDiv');
     container.appendChild(newDiv);
   }
 };
 
-userSelection.addEventListener("input", appendNumberofDivsSelectedByUser);
+function numOfDivsInputtedByUser (event){
+    squaresPerSide = Number(event.target.value);
+    console.log(squaresPerSide);
+    createGrid();
+}
+
+userSelection.addEventListener("input", numOfDivsInputtedByUser);
+
+createGrid();
