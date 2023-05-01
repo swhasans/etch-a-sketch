@@ -62,5 +62,3 @@ userSelectClear.addEventListener("click", eraseBox);
 
 createGrid();
 container.addEventListener("mousedown", changeColourOfDivtoBlack);
-
-
