@@ -42,6 +42,8 @@ function changeColourOfDivtoRandom(event) {
   event.target.style.setProperty("background-color", randomColor);
 }
 
+userInputNumOfDiv.addEventListener("input", numOfDivsInputtedByUser);
+
 if (userSelectBlack) {
   userSelectBlack.addEventListener("click", function () {
     container.removeEventListener("mousedown", changeColourOfDivtoRandom);
@@ -60,4 +62,5 @@ userSelectClear.addEventListener("click", eraseBox);
 
 createGrid();
 container.addEventListener("mousedown", changeColourOfDivtoBlack);
+
 
