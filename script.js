@@ -1,5 +1,7 @@
 const container = document.querySelector(".flex-container");
 const userInputNumOfDiv = document.querySelector("#user-selection-squares");
+const userSelectBlack = document.querySelector("#user-color-squares-black");
+const userSelectRandom = document.querySelector("#user-color-squares-random");
 const userSelectClear = document.querySelector("#user-clear-squares");
 let squaresPerSide = 16;
 
@@ -30,13 +32,22 @@ function numOfDivsInputtedByUser (event){
     createGrid();
 }
 
-function changeColourOfDiv(event){
+function changeColourOfDivtoBlack(event){
     event.target.style.setProperty('background-color', "black")
-    console.log(event.target);
+} 
+
+function changeColourOfDivtoRandom(event){
+    let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+    console.log("randomColor : " + randomColor);
+    event.target.style.setProperty('background-color', randomColor)
 } 
 
 userInputNumOfDiv.addEventListener("input", numOfDivsInputtedByUser);
-container.addEventListener("mousedown", changeColourOfDiv);
+container.addEventListener("mousedown", changeColourOfDivtoBlack);
+
+container.addEventListener("mousedown", changeColourOfDivtoRandom);
+
+
 userSelectClear.addEventListener("click", eraseBox);
 
 createGrid();
