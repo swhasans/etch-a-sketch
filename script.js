@@ -3,6 +3,7 @@ const container = document.querySelector(".flex-container");
 const userInputNumOfDiv = document.querySelector("#user-selection-squares");
 const userSelectBlack = document.querySelector("#user-color-squares-black");
 const userSelectRandom = document.querySelector("#user-color-squares-random");
+const userSelectWhite = document.querySelector("#user-color-squares-white");
 const userSelectClear = document.querySelector("#user-clear-squares");
 
 // Initializing the number of squares per side to 16
@@ -48,6 +49,11 @@ function changeColourOfDivtoBlack(event) {
   event.target.style.setProperty("background-color", "black");
 }
 
+// Function to change the color of a square to white when clicked
+function changeColourOfDivtoWhite(event) {
+  event.target.style.setProperty("background-color", "white");
+}
+
 // Function to change the color of a square to a random color when clicked
 function changeColourOfDivtoRandom(event) {
   let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
@@ -58,20 +64,31 @@ function changeColourOfDivtoRandom(event) {
 // Event listener for when the user inputs the number of squares per side
 userInputNumOfDiv.addEventListener("input", numOfDivsInputtedByUser);
 
-// Event listeners for when the user selects to color the squares black or random
+// Event listeners for when the user selects to color the squares black, white or random
 if (userSelectBlack) {
   userSelectBlack.addEventListener("click", function () {
-    // Remove the random color event listener and add the black color event listener
+    // Remove the random and white color event listener and add the black color event listener
     container.removeEventListener("mousedown", changeColourOfDivtoRandom);
+    container.removeEventListener("mousedown", changeColourOfDivtoWhite);
     container.addEventListener("mousedown", changeColourOfDivtoBlack);
   });
 }
 
 if (userSelectRandom) {
   userSelectRandom.addEventListener("click", function () {
-    // Remove the black color event listener and add the random color event listener
+    // Remove the black and white color event listener and add the random color event listener
     container.removeEventListener("mousedown", changeColourOfDivtoBlack);
+    container.removeEventListener("mousedown", changeColourOfDivtoWhite);
     container.addEventListener("mousedown", changeColourOfDivtoRandom);
+  });
+}
+
+if (userSelectWhite) {
+  userSelectWhite.addEventListener("click", function () {
+    // Remove the black and random color event listener and add the white event listener
+    container.removeEventListener("mousedown", changeColourOfDivtoBlack);
+    container.removeEventListener("mousedown", changeColourOfDivtoRandom);
+    container.addEventListener("mousedown", changeColourOfDivtoWhite);
   });
 }
 
