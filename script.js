@@ -51,8 +51,8 @@ function changeColourOfDivtoBlack(event) {
 
 // Function to change the color of a square to white when clicked
 function changeColourOfDivtoWhite(event) {
-    event.target.style.setProperty("background-color", "white");
-  }
+  event.target.style.setProperty("background-color", "white");
+}
 
 // Function to change the color of a square to a random color when clicked
 function changeColourOfDivtoRandom(event) {
@@ -83,13 +83,13 @@ if (userSelectRandom) {
   });
 }
 
-if(userSelectWhite){
-    userSelectWhite.addEventListener("click", function () {
-        // Remove the black and random color event listener and add the white event listener
-        container.removeEventListener("mousedown", changeColourOfDivtoBlack);
-        container.removeEventListener("mousedown", changeColourOfDivtoRandom);
-        container.addEventListener("mousedown", changeColourOfDivtoWhite);
-    });  
+if (userSelectWhite) {
+  userSelectWhite.addEventListener("click", function () {
+    // Remove the black and random color event listener and add the white event listener
+    container.removeEventListener("mousedown", changeColourOfDivtoBlack);
+    container.removeEventListener("mousedown", changeColourOfDivtoRandom);
+    container.addEventListener("mousedown", changeColourOfDivtoWhite);
+  });
 }
 
 // Event listener for when the user wants to clear the grid
