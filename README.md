@@ -19,7 +19,7 @@ To use this project, simply clone the repository and open the index.html file in
 
 ## Usage
 - To start drawing, simply move your mouse over the squares on the grid. You can change the size of the grid by selecting the number of squares per side. 
-- You can also select the color of the pen by clicking on the only black or rainbow button. 
+- You can also select the color of the pen by clicking on the 'Color Black'only  or 'Color Rainbow' button. 
 - Additionally, click the 'Eraser' button to clear individual squares.
 - To clear the entire grid, simply click on the "Clear" button.
 
