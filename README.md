@@ -1,4 +1,15 @@
 # Etch-a-Sketch
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Languages and Tools](#languages-and-tools)
+3. [Features](#features)
+4. [Installation](installation)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Acknowledgements](#acknowledgements)
+
+## Introduction
 Etch-a-Sketch is a web application that allows users to draw and create artistic designs using their mouse.
 
 ## Languages and Tools
