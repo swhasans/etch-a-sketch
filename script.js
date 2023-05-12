@@ -1,5 +1,6 @@
 // Selecting the container, input fields, and buttons
 const container = document.querySelector(".flex-container");
+const newDiv = document.querySelectorAll(".flex-container > .newDiv");
 const userInputNumOfDiv = document.querySelector("#user-selection-squares");
 const userSelectBlack = document.querySelector("#user-color-squares-black");
 const userSelectRandom = document.querySelector("#user-color-squares-random");
@@ -71,9 +72,17 @@ userInputNumOfDiv.addEventListener("input", numOfDivsInputtedByUser);
 if (userSelectBlack) {
   userSelectBlack.addEventListener("click", function () {
     // Remove the random and white color event listener and add the black color event listener
-    container.removeEventListener("mousedown", changeColourOfDivtoRandom);
-    container.removeEventListener("mousedown", changeColourOfDivtoWhite);
-    container.addEventListener("mousedown", changeColourOfDivtoBlack);
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.removeEventListener('mouseover', changeColourOfDivtoRandom);
+    });
+
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.removeEventListener('mouseover', changeColourOfDivtoWhite);
+    });
+
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.addEventListener('mouseover', changeColourOfDivtoBlack);
+    });
   });
 }
 
@@ -100,4 +109,6 @@ userSelectClear.addEventListener("click", eraseBox);
 
 // Create the grid with black color as the default
 createGrid();
-container.addEventListener("mousedown", changeColourOfDivtoBlack);
+container.querySelectorAll('.newDiv').forEach(square => {
+  square.addEventListener('mouseover', changeColourOfDivtoBlack);
+});
