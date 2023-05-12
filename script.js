@@ -89,8 +89,8 @@ if (userSelectBlack) {
 if (userSelectRandom) {
   userSelectRandom.addEventListener("click", function () {
     // Remove the black and white color event listener and add the random color event listener
-     container.querySelectorAll('.newDiv').forEach(square => {
-      square.removeEventListener('mouseover', changeColourOfDivtoRandom);
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.removeEventListener('mouseover', changeColourOfDivtoBlack);
     });
 
     container.querySelectorAll('.newDiv').forEach(square => {
@@ -98,7 +98,7 @@ if (userSelectRandom) {
     });
 
     container.querySelectorAll('.newDiv').forEach(square => {
-      square.addEventListener('mouseover', changeColourOfDivtoBlack);
+      square.addEventListener('mouseover', changeColourOfDivtoRandom);
     });
   });
 }
