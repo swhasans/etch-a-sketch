@@ -25,7 +25,7 @@ function eraseBox() {
 // Function to create the grid based on the number of squares per side
 function createGrid() {
   // Limit the input to 100 squares per side
-  squaresPerSide = Math.min(squaresPerSide, 100); 
+  squaresPerSide = Math.min(squaresPerSide, 100);
 
   // Set the number of squares per side as a CSS variable
   container.style.setProperty("--squares-per-side", squaresPerSide);
@@ -69,29 +69,56 @@ userInputNumOfDiv.addEventListener("input", numOfDivsInputtedByUser);
 
 // Event listeners for when the user selects to color the squares black, white or random
 if (userSelectBlack) {
+  // Add event listener for when user selects black color
   userSelectBlack.addEventListener("click", function () {
-    // Remove the random and white color event listener and add the black color event listener
-    container.removeEventListener("mousedown", changeColourOfDivtoRandom);
-    container.removeEventListener("mousedown", changeColourOfDivtoWhite);
-    container.addEventListener("mousedown", changeColourOfDivtoBlack);
+    // Remove the random and white color event listener and add the black color event listener to each square
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.removeEventListener('mouseover', changeColourOfDivtoRandom);
+    });
+
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.removeEventListener('mouseover', changeColourOfDivtoWhite);
+    });
+
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.addEventListener('mouseover', changeColourOfDivtoBlack);
+    });
   });
 }
 
 if (userSelectRandom) {
+  // Add event listener for when user selects random color
   userSelectRandom.addEventListener("click", function () {
-    // Remove the black and white color event listener and add the random color event listener
-    container.removeEventListener("mousedown", changeColourOfDivtoBlack);
-    container.removeEventListener("mousedown", changeColourOfDivtoWhite);
-    container.addEventListener("mousedown", changeColourOfDivtoRandom);
+    // Remove the black and white color event listener and add the random color event listener to each square
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.removeEventListener('mouseover', changeColourOfDivtoBlack);
+    });
+
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.removeEventListener('mouseover', changeColourOfDivtoWhite);
+    });
+
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.addEventListener('mouseover', changeColourOfDivtoRandom);
+    });
   });
 }
 
 if (userSelectWhite) {
+  // Add event listener for when user selects white color
   userSelectWhite.addEventListener("click", function () {
-    // Remove the black and random color event listener and add the white event listener
-    container.removeEventListener("mousedown", changeColourOfDivtoBlack);
-    container.removeEventListener("mousedown", changeColourOfDivtoRandom);
-    container.addEventListener("mousedown", changeColourOfDivtoWhite);
+    // Remove the black and random color event listener and add the white color event listener to each square
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.removeEventListener('mouseover', changeColourOfDivtoBlack);
+    });
+
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.removeEventListener('mouseover', changeColourOfDivtoRandom);
+    });
+
+    container.querySelectorAll('.newDiv').forEach(square => {
+      square.addEventListener('mouseover', changeColourOfDivtoWhite);
+    });
   });
 }
 
@@ -100,4 +127,6 @@ userSelectClear.addEventListener("click", eraseBox);
 
 // Create the grid with black color as the default
 createGrid();
-container.addEventListener("mousedown", changeColourOfDivtoBlack);
+container.querySelectorAll('.newDiv').forEach(square => {
+  square.addEventListener('mouseover', changeColourOfDivtoBlack);
+});
