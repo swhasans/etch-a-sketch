@@ -1,21 +1,27 @@
 # Etch-a-Sketch
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Languages and Tools](#languages-and-tools)
-3. [Features](#features)
-4. [Installation](installation)
-3. [Usage](#usage)
-4. [License](#license)
-5. [Acknowledgements](#acknowledgements)
+  - [Introduction](#introduction)
+  - [Languages](#languages)
+  - [Tools](#tools)
+  - [Features](#features)
+  - [Preview](#preview)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Acknowledgements](#acknowledgements)
 
 ## Introduction
 Etch-a-Sketch is a web application that allows users to draw and create artistic designs using their mouse.
 
-## Languages and Tools
+## Languages
 1. HTML 
 2. CSS 
 3. JavaScript.
+
+## Tools
+- Visual Studio Code
+- Linux terminal
+- Git and GitHub
 
 ## Features
 - Users can draw on the screen using their mouse.
@@ -23,10 +29,8 @@ Etch-a-Sketch is a web application that allows users to draw and create artistic
 - Users can clear the grid and start over.
 - Users can select the color of the pen.
 
-## Installation
-To use this project, simply clone the repository and open the index.html file in your browser.
-
-`git clone https://github.com/your-username/etch-a-sketch.git`
+## Preview
+🔗 **Live preview:** [Click Here!](https://swhasans.github.io/etch-a-sketch/)
 
 ## Usage
 - To start drawing, simply move your mouse over the squares on the grid. You can change the size of the grid by selecting the number of squares per side. 
@@ -38,4 +42,4 @@ To use this project, simply clone the repository and open the index.html file in
 - This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 ## Acknowledgements
-This project was inspired by The Odin Project.
+- This project was inspired by The Odin Project.
