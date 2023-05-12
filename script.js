@@ -1,6 +1,5 @@
 // Selecting the container, input fields, and buttons
 const container = document.querySelector(".flex-container");
-const newDiv = document.querySelectorAll(".flex-container > .newDiv");
 const userInputNumOfDiv = document.querySelector("#user-selection-squares");
 const userSelectBlack = document.querySelector("#user-color-squares-black");
 const userSelectRandom = document.querySelector("#user-color-squares-random");
@@ -111,11 +110,11 @@ if (userSelectWhite) {
     });
 
     container.querySelectorAll('.newDiv').forEach(square => {
-      square.removeEventListener('mouseover', changeColourOfDivtoWhite);
+      square.removeEventListener('mouseover', changeColourOfDivtoRandom);
     });
 
     container.querySelectorAll('.newDiv').forEach(square => {
-      square.addEventListener('mouseover', changeColourOfDivtoRandom);
+      square.addEventListener('mouseover', changeColourOfDivtoWhite);
     });
   });
 }
