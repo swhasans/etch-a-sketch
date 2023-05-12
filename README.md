@@ -20,7 +20,7 @@ Etch-a-Sketch is a web application that allows users to draw and create artistic
 
 ## Tools
 - Visual Studio Code
-- Linux terminal
+- Bash Shell
 - Git and GitHub
 
 ## Features
