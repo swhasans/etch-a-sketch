@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Meta information for the page -->
-        <meta charset="utf-8">
-        <title>Etch-A-Sketch</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- External stylesheet for styling the page -->
-        <link rel="stylesheet" href="style.css">
-        
-        <!-- Asynchronous script for loading the JavaScript file -->
-        <script src="./script.js" async defer></script>
-    </head>
-    <body>
-        <!-- Main container for the Etch-A-Sketch app --> 
-        <div class="main-container">
-            <!-- Container for user inputs -->
-            <div class="user-container">
-                <!-- Input field for number of squares per side -->
-                <div class="user-container-input">
-                    <input name="user-selection-squares" id = "user-selection-squares" style="width: 220px;" placeholder="Enter the number of squares per side">
-                    <!-- Note to the user about the maximum number of squares they can input -->
-                    <label><em><small> (Please note that the maximum number of squares you can input is 100.) </small></em></label>
-                </div>
 
-                <br>
+<head>
+    <!-- Meta information for the page -->
+    <meta charset="utf-8">
+    <title>Etch-A-Sketch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-                <!-- Button for setting the pen color to black -->
-                <div class="user-container-black-pen">
-                    <input type="button" id = "user-color-squares-black" value="Color Black">
-                </div>
-                
-                <br>
+    <!-- External stylesheet for styling the page -->
+    <link rel="stylesheet" href="style.css">
 
-                <!-- Button for setting the pen color to a random color -->
-                <div class="user-container-random-color-pen">
-                    <input type="button" id = "user-color-squares-random" value="Color Random">
-                </div>
+    <!-- Asynchronous script for loading the JavaScript file -->
+    <script src="./script.js" async defer></script>
+</head>
 
-                <br>
-
-                <!-- Button for setting the pen color to white (to erase) -->
-                <div class="user-container-white-pen">
-                    <input type="button" id = "user-color-squares-white" value="Eraser">
-                </div>
-
-                <br>
-
-                <!-- Button for clearing the Etch-A-Sketch -->
-                <div class="user-container-clear">
-                    <input type="button" id = "user-clear-squares" value="Clear Etch-A-Sketch">
-                </div>
+<body>
+    <!-- Main container for the Etch-A-Sketch app -->
+    <div class="main-container">
+        <!-- Container for user inputs -->
+        <div class="user-container">
+            <!-- Input field for number of squares per side -->
+            <div class="user-container-input">
+                <input name="user-selection-squares" id="user-selection-squares" style="width: 220px;"
+                    placeholder="Enter the number of squares per side">
+                <!-- Note to the user about the maximum number of squares they can input -->
+                <label><em><small> (Please note that the maximum number of squares you can input is 100.)
+                        </small></em></label>
             </div>
 
-            <!-- Container for the grid of squares -->
-            <div class="flex-container"></div>
+            <br>
+
+            <!-- Button for setting the pen color to black -->
+            <div class="user-container-black-pen">
+                <input type="button" id="user-color-squares-black" value="Color Black">
+            </div>
+
+            <br>
+
+            <!-- Button for setting the pen color to a random color -->
+            <div class="user-container-random-color-pen">
+                <input type="button" id="user-color-squares-random" value="Color Random">
+            </div>
+
+            <br>
+
+            <!-- Button for setting the pen color to white (to erase) -->
+            <div class="user-container-white-pen">
+                <input type="button" id="user-color-squares-white" value="Eraser">
+            </div>
+
+            <br>
+
+            <!-- Button for clearing the Etch-A-Sketch -->
+            <div class="user-container-clear">
+                <input type="button" id="user-clear-squares" value="Clear Etch-A-Sketch">
+            </div>
         </div>
-    </body>
+
+        <!-- Container for the grid of squares -->
+        <div class="flex-container"></div>
+    </div>
+</body>
+
 </html>
