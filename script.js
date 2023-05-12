@@ -69,8 +69,9 @@ userInputNumOfDiv.addEventListener("input", numOfDivsInputtedByUser);
 
 // Event listeners for when the user selects to color the squares black, white or random
 if (userSelectBlack) {
+  // Add event listener for when user selects black color
   userSelectBlack.addEventListener("click", function () {
-    // Remove the random and white color event listener and add the black color event listener
+    // Remove the random and white color event listener and add the black color event listener to each square
     container.querySelectorAll('.newDiv').forEach(square => {
       square.removeEventListener('mouseover', changeColourOfDivtoRandom);
     });
@@ -86,8 +87,9 @@ if (userSelectBlack) {
 }
 
 if (userSelectRandom) {
+  // Add event listener for when user selects random color
   userSelectRandom.addEventListener("click", function () {
-    // Remove the black and white color event listener and add the random color event listener
+    // Remove the black and white color event listener and add the random color event listener to each square
     container.querySelectorAll('.newDiv').forEach(square => {
       square.removeEventListener('mouseover', changeColourOfDivtoBlack);
     });
@@ -103,8 +105,9 @@ if (userSelectRandom) {
 }
 
 if (userSelectWhite) {
+  // Add event listener for when user selects white color
   userSelectWhite.addEventListener("click", function () {
-    // Remove the black and random color event listener and add the white event listener
+    // Remove the black and random color event listener and add the white color event listener to each square
     container.querySelectorAll('.newDiv').forEach(square => {
       square.removeEventListener('mouseover', changeColourOfDivtoBlack);
     });
