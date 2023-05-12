@@ -25,7 +25,7 @@ function eraseBox() {
 // Function to create the grid based on the number of squares per side
 function createGrid() {
   // Limit the input to 100 squares per side
-  squaresPerSide = Math.min(squaresPerSide, 100); 
+  squaresPerSide = Math.min(squaresPerSide, 100);
 
   // Set the number of squares per side as a CSS variable
   container.style.setProperty("--squares-per-side", squaresPerSide);
